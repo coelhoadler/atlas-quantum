@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'atlas';
-  src:  url('fonts/atlas.eot?chye9e');
-  src:  url('fonts/atlas.eot?chye9e#iefix') format('embedded-opentype'),
-    url('fonts/atlas.ttf?chye9e') format('truetype'),
-    url('fonts/atlas.woff?chye9e') format('woff'),
-    url('fonts/atlas.svg?chye9e#atlas') format('svg');
+  src:  url('../fonts/atlas.eot?chye9e');
+  src:  url('../fonts/atlas.eot?chye9e#iefix') format('embedded-opentype'),
+    url('../fonts/atlas.ttf?chye9e') format('truetype'),
+    url('../fonts/atlas.woff?chye9e') format('woff'),
+    url('../fonts/atlas.svg?chye9e#atlas') format('svg');
   font-weight: normal;
   font-style: normal;
 }
