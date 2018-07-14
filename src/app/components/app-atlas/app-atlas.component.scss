@@ -1,5 +1,10 @@
 @import '../../../assets/styles/atlas-colors.scss';
 
 .c-module-atlas {
-  background: $backgroundColor
+  background: $backgroundColor;
+  &--waves {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
 }

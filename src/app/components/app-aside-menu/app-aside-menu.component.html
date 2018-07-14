@@ -1,10 +1,12 @@
 <aside [ngClass]="['c-module-aside-menu']">
   <div [ngClass]="['c-module-aside-menu__container-logo']">
     <i class="icon icon-logo-atlas"></i>
+    <hr [ngClass]="['c-module-aside-menu__container-logo-hr']"/>
   </div>
   <div [ngClass]="['c-module-aside-menu__container-buttons']">
-    <button>
-      <label>Lucros</label>
+    <button [ngClass]="['c-module-aside-menu__container-buttons-button']">
+      <i class="icon icon-ic-home"></i>
+      <label [ngClass]="['c-module-aside-menu__container-buttons-button--label']">Lucros</label>
     </button>
   </div>
 </aside>
