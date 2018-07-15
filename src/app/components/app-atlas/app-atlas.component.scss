@@ -1,10 +1,40 @@
+@import '../../../assets/styles/atlas-sizes.scss';
 @import '../../../assets/styles/atlas-colors.scss';
+@import '../../../assets/styles/atlas-mixins.scss';
 
 .c-module-atlas {
-  background: $backgroundColor;
-  &--waves {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+  background: $backgroundColor url('../../../assets/images/waves.svg') no-repeat bottom right;
+  display: flex;
+  max-width: 100%;
+}
+
+.c-module-content {
+  width: calc(100% - #{$atlasWidthAsideMenu});
+  &__container-header {
+    background: $white;
+    @include box-shadow(0, 0, 5px, 0, rgba(0, 0, 0, .2));
+    height: $atlasHeightHeader;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .icon {
+      color: $headerIconColor;
+      margin-right: 8px;
+    }
+
+    &-label {
+      margin-right: 131px;
+      color: $headerLabelPersonColor;
+
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+    }
+  }
+  &__container-main {
+    height: calc(100vh - #{$atlasHeightHeader});
   }
 }
