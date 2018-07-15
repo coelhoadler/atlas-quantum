@@ -1,6 +1,7 @@
+@import '../../../assets/styles/atlas-sizes.scss';
 @import '../../../assets/styles/atlas-colors.scss';
 @import '../../../assets/styles/atlas-mixins.scss';
-@import '../../../assets/styles/atlas-sizes.scss';
+@import '../../../assets/styles/atlas-placeholders.scss';
 
 .c-module-aside-menu {
   width: $atlasWidthAsideMenu;
@@ -62,10 +63,7 @@
         box-shadow: none;
       }
       &:active, &:focus {
-        outline: 0;
-        border: none;
-        outline-style: none;
-        -moz-outline-style: none;
+        @extend %remove-outline;
       }
     }
   }

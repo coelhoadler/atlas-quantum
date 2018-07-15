@@ -1,47 +1,4 @@
 <div [ngClass]="['c-module-atlas']">
   <app-aside-menu></app-aside-menu>
-  <!-- <app-content></app-content> -->
-  <div [ngClass]="['c-module-content']">
-    <header [ngClass]="['c-module-content__container-header']">
-      <i class="icon icon-ic-person"></i>
-      <span [ngClass]="['c-module-content__container-header-label']">
-        Manoel Neto
-      </span>
-    </header>
-
-    <main [ngClass]="['c-module-content-main']">
-      <div [ngClass]="['c-module-content-main__container']">
-        <div [ngClass]="['c-module-content-main__container-header']">
-          <div [ngClass]="['c-module-content-main__container-header-title']">
-            <h1 [ngClass]="['c-module-content-main__container-header-title-h1']">
-              Lucros
-            </h1>
-            <h2 [ngClass]="['c-module-content-main__container-header-title-h2']">
-              Relatório de distribuição de lucro
-            </h2>
-          </div>
-          <div>
-            <input type="search"
-              placeholder="Digite qualquer coisa da tabela" />
-          </div>
-        </div>
-
-        <div [ngClass]="['c-module-content-main__container-table']">
-          <h2
-            [ngClass]="['c-module-content-main__container-table-title']"
-          >Distribuição de lucro (último mês)</h2>
-          <table style="width:100%">
-            <tr>
-              <th>Data</th>
-              <th>Moeda</th>
-              <th>Rendimento</th>
-              <th>%</th>
-              <th>Saldo</th>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </main>
-
-  </div>
+  <app-content></app-content>
 </div>

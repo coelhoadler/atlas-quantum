@@ -1,0 +1,12 @@
+<footer [ngClass]="['c-module-footer']">
+  <span [ngClass]="['c-module-footer-rights']">
+    Atlas Quantum @ 2018. All rights reserved
+  </span>
+  <ul [ngClass]="['c-module-footer-icons']">
+    <li *ngFor="let item of icons" [ngClass]="['c-module-footer-icons-icon']">
+      <a [href]="item.url" [ngClass]="['c-module-footer-icons-icon-anchor']" target="_blank">
+        <i class="icon icon-ic-{{ item.icon }}"></i>
+      </a>
+    </li>
+  </ul>
+</footer>
