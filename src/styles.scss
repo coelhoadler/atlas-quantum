@@ -1,1 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 @import 'assets/styles/reset.scss';
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: bold;
+  src: url("./assets/fonts/gilroy-extrabold.otf") format("opentype");
+}
