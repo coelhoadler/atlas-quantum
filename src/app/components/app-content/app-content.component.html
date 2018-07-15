@@ -18,7 +18,7 @@
             </h2>
           </div>
           <div [ngClass]="['c-module-content-main__container-header-search']">
-            <input type="text"
+            <input type="search" [(ngModel)]="searchText"
               placeholder="Digite qualquer coisa da tabela" />
               <button>
                 <i class="icon icon-ic-search"></i>
@@ -30,19 +30,38 @@
           <h2
             [ngClass]="['c-module-content-main__container-table-title']"
           >Distribuição de lucro (último mês)</h2>
-          <table>
-            <tr>
-              <th>Data</th>
-              <th>Moeda</th>
-              <th>Rendimento</th>
-              <th>%</th>
-              <th>Saldo</th>
-            </tr>
-          </table>
+
+          <div [ngClass]="['c-module-content-main__container-table-box']">
+            <table>
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Moeda</th>
+                  <th>Rendimento</th>
+                  <th>%</th>
+                  <th>Saldo</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="!errorLoad">
+                <tr *ngFor="let transaction of transactions | filterPipe : searchText">
+                  <td>{{ transaction?.dateMoviment | date: 'dd/MM/yyy hh:mm' }}</td>
+                  <td>{{ transaction?.coin | uppercase }}</td>
+                  <td>+{{ transaction?.proft }} {{ transaction?.coin | uppercase }}</td>
+                  <td>{{ transaction?.profitPercentage | fmtPercentagePipe }}</td>
+                  <td>{{ transaction?.proft | fmtBtcPipe: transaction?.profitPercentage }} BTC </td>
+                </tr>
+              </tbody>
+              <tbody *ngIf="errorLoad">
+                <tr [ngClass]="['error']">
+                  <td colspan="5" [ngClass]="['error']">
+                    Erro ao carregar os dados. Tente novamente mais tarde.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+        <app-footer></app-footer>
       </div>
     </main>
-
-    <app-footer></app-footer>
-
   </div>

@@ -1,5 +1,8 @@
 // Colors are used into atlas application //
 
+  // globally
+  $errorFontColor: #cc0000 !default;
+
   // main atlas project
   $backgroundColor: #EDF3F0 !default;
   $white: #FFF !default;
@@ -16,6 +19,7 @@
   // Table
   $titleTableColor: #3C3C3C !default;
   $searchPlaceholderTableColor: #9B9B9B !default;
+  $cellColor: #F8F8F8 !default;
 
   // Footer
   $rigthsColor: #9B9B9B !default;

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 @import 'assets/styles/reset.scss';
+@import 'assets/styles/atlas-colors.scss';
+@import 'assets/styles/atlas-placeholders.scss';
 
 @font-face {
   font-family: 'Gilroy';
@@ -9,4 +11,13 @@
 
 body {
   overflow-y: hidden;
+  @extend %noselect;
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
+
+.error {
+  color: $errorFontColor;
 }

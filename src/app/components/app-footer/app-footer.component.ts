@@ -1,4 +1,4 @@
-import { Icon } from './../../interfaces/icon.interface';
+import { Icon } from '../../interfaces/icon.interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
