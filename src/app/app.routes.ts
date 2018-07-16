@@ -3,8 +3,9 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const ROUTES: Routes = [
-    { path: '',      redirectTo: 'profits', pathMatch: 'full' },
+    { path: '', redirectTo: 'profits', pathMatch: 'full' },
     { path: 'profits', component: AppComponent },
+    { path: '**', redirectTo: 'profits' }
 ];
 
 export const APP_ROUTES: ModuleWithProviders = RouterModule.forRoot(ROUTES);

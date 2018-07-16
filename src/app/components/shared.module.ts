@@ -8,11 +8,13 @@ import { AppAtlasComponent } from './app-atlas/app-atlas.component';
 import { AppContentComponent } from './app-content/app-content.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { FmtPercentagePipe } from '../pipes/percentage.pipe';
+import { RouterModule } from '../../../node_modules/@angular/router';
 
 @NgModule({
     imports: [
         CommonModule,
-        FormsModule
+        FormsModule,
+        RouterModule
     ],
     exports: [
       AppAtlasComponent,
