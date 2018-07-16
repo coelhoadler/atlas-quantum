@@ -15,4 +15,7 @@ export class QuantumService {
     return this._http.get<Btc>(API.mocky.get);
   }
 
+  public getDataFetch(): Promise<Array<Btc>> {
+    return fetch(API.mocky.get).then(res => res.json());
+  }
 }

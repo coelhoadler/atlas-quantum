@@ -16,7 +16,7 @@ export class AppContentComponent implements OnInit {
   public loading: Boolean = true;
 
   ngOnInit() {
-    this.getProfts();
+    this.getProftsFetch();
   }
 
   public getProfts() {
@@ -33,6 +33,19 @@ export class AppContentComponent implements OnInit {
           this.loading = false;
         }
       );
+  }
+
+  public getProftsFetch() {
+    this._quantumSrv
+    .getDataFetch()
+    .then((transactions: Array<Btc>) => {
+        this.errorLoad = false;
+        this.transactions = this.sortBTCByDescDate(transactions);
+        this.loading = false;
+    }).catch(error => {
+      this.errorLoad = true;
+      this.loading = false;
+    });
   }
 
   private sortBTCByDescDate(transactions: Array<Btc>): Array<Btc> {
