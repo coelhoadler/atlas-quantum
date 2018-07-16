@@ -4,8 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ```
 Make sure to use the latest version of Angular CLI;
--- npm i -g @angular/cli@latest
 ```
+
+## Steps
+
+1. npm i -g @angular/cli@latest
+2. npm i __(to install all dependencies from package.json)__
+3. ng s
 
 ## Development server
 
