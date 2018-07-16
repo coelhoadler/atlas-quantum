@@ -1,4 +1,10 @@
 <div [ngClass]="['c-module-content']">
+
+    <img [ngClass]="['c-module-content-loader']"
+      src="../../../assets/images/ajax-loader.gif"
+      *ngIf="loading"
+    />
+
     <header [ngClass]="['c-module-content__container-header']">
       <i class="icon icon-ic-person"></i>
       <span [ngClass]="['c-module-content__container-header-label']">

@@ -5,6 +5,12 @@
 
 .c-module-content {
   position: relative;
+  &-loader {
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
   &__container-header {
     background: $white;
     @include box-shadow(0, 0, 5px, 0, rgba(0, 0, 0, .2));

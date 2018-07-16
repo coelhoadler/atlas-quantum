@@ -13,6 +13,7 @@ export class AppContentComponent implements OnInit {
 
   public transactions: Array<Btc> = [];
   public errorLoad: Boolean = false;
+  public loading: Boolean = true;
 
   ngOnInit() {
     this.getProfts();
@@ -25,9 +26,11 @@ export class AppContentComponent implements OnInit {
         (transactions: any) => {
           this.errorLoad = false;
           this.transactions = this.sortBTCByDescDate(transactions);
+          this.loading = false;
         },
         error => {
           this.errorLoad = true;
+          this.loading = false;
         }
       );
   }
