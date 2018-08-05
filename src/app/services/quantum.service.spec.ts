@@ -14,12 +14,12 @@ describe('QuantumService', () => {
 
   });
 
-  it('should be created', () => {
-    expect(quantumService).toBeTruthy();
-  });
+  // it('should be created', () => {
+  //   expect(quantumService).toBeTruthy();
+  // });
 
-  it('should return something', async(() => {
+  // it('should return something', async(() => {
 
-  }));
+  // }));
 
 });
