@@ -19,7 +19,7 @@ describe('AppAtlasComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be create', () => {
     expect(component).toBeTruthy();
   });
 });
