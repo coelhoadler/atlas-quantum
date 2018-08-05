@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 @import 'assets/styles/reset.scss';
 @import 'assets/styles/atlas-colors.scss';
+@import 'assets/styles/atlas-mixins.scss';
 @import 'assets/styles/atlas-placeholders.scss';
 
 @font-face {
@@ -10,7 +11,12 @@
 }
 
 body {
-  overflow-y: hidden;
+  overflow-x: hidden;
+
+  @include mobile {
+    // overflow-y: auto;
+  }
+
   @extend %noselect;
   ::-webkit-scrollbar {
     width: 0px;

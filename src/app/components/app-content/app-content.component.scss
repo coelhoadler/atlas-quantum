@@ -42,16 +42,32 @@
   &-main {
     display: flex;
     justify-content: flex-end;
-    height: calc(100vh - #{$atlasHeightHeader});
 
+    @include mobile {
+      justify-content: center;
+    }
+
+    // height: calc(100vh - #{$atlasHeightHeader});
     padding-right: $atlasContentRightPadding;
+    padding-left: 5em;
+
+    @include mobile {
+      padding: 1rem;
+    }
 
     &__container {
-      width: 95%; // of max-width: 1440px
+      width: 100%; // of max-width: 1440px
       &-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include mobile {
+          width: 95%;
+          flex-direction: column;
+          margin-bottom: 2rem;
+        }
+
         &-title {
           margin-bottom: 24px;
           &-h1 {
@@ -71,7 +87,7 @@
         }
         &-search {
           input[type="search"] {
-            background-color: rgba(0, 0, 0, 0.05000000074505806);
+            background-color: rgba(0, 0, 0, .05);
             border: none;
             border-radius: 24px;
             width: 336px;
@@ -111,7 +127,7 @@
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.23),
                     0 0 2px 0 rgba(0, 0, 0, 0.11);
         border-radius: 6px;
-        height: 60%;
+        // height: 60%;
         padding: 1.5em;
 
         &-title {
@@ -126,7 +142,7 @@
 
         &-box {
           overflow-y: auto;
-          height: calc(100% - 72px);
+          height: 500px;
           width: 100%;
         }
 
