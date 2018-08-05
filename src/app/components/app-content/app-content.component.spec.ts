@@ -1,3 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
+import { FmtPercentagePipe } from './../../pipes/percentage.pipe';
+import { FmtBtcPipe } from './../../pipes/fmt-btc.pipe';
+import { FilterPipe } from './../../pipes/filter.pipe';
 import { SharedModule } from './../shared.module';
 import { FormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
@@ -11,11 +15,15 @@ describe('AppContentComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppContentComponent
+        AppContentComponent,
+
+        FilterPipe,
+        FmtBtcPipe,
+        FmtPercentagePipe
       ],
       imports: [
-        SharedModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
       ]
     })
     .compileComponents();
@@ -27,7 +35,7 @@ describe('AppContentComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });
